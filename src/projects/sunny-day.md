@@ -19,14 +19,14 @@ links: [
 ]
 hero: https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg
 gallery: [
-    'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg',
-    'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg',
-    'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg',
-    'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg',
-    'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg',
-    'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg',
-    'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg',
+    ['caption yeah!!! yeah!!!', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],
+    ['caption yeah!!! yeah!!!', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],
+    ['caption yeah!!! yeah!!!', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],
+    ['caption yeah!!! yeah!!!', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],
+    ['caption yeah!!! yeah!!!', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],
+    ['caption yeah!!! yeah!!!', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],
 ]
+video: "https://player.vimeo.com/video/394873709?h=a67838aa30"                     
 process: [
     ['1. some text describes process', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],
     ['2. some text describes process', 'https://portfolio-22.s3.ap-northeast-2.amazonaws.com/illogical-love_hero.jpg'],

@@ -1,12 +1,15 @@
 import React from 'react'
 
-function Card({ className, href, title, desc, caption, children }) {
+function Card({ className, href, img, title, desc, caption, children }) {
+    console.log(href)
     return (
-        <div 
-            className={`flex flex-col justify-center gap-y-xs ${className} cursor-pointer`}
-            onClick={ () => window.location.href = href }
+        <a
+            className={`flex flex-col justify-center gap-y-xs ${className}`}
+            href={href}
         >
-            { children }
+            <div className="w-auto h-[240px] flex justify-center items-center rounded-xs overflow-hidden">
+                <img className="w-full" src={img} alt={`${title} hero image`}/>
+            </div>
 
             <h4 className="H4">
                 { title }
@@ -19,7 +22,7 @@ function Card({ className, href, title, desc, caption, children }) {
             <p className="minor opacity-30">
                 { caption }
             </p>
-        </div>
+        </a>
     )
 }
 

@@ -12,7 +12,7 @@ import Tag from '../components/Tag'
 
 function IndexPage() {
     const data = useStaticQuery(graphql`
-        query ProjectList {
+        query ProjectSix {
             allMarkdownRemark(
                 sort: [{frontmatter: { order: ASC }}], 
                 limit: 6
@@ -117,16 +117,13 @@ function IndexPage() {
                                 return (
                                     <Card
                                         className="col-span-4"
-                                        herf={`/projects/${slug}`}
+                                        href={`/projects/${slug}`}
+                                        img={hero}
                                         title={title}
                                         desc={desc}
                                         caption={caption}
                                         key={uuid()}
-                                    >
-                                        <div className="w-auto h-[240px] flex justify-center items-center rounded-xs overflow-hidden">
-                                            <img className="w-full" src={hero} alt={`${title} hero image`}/>
-                                        </div>
-                                    </Card>
+                                    />
                                 )
                             })
                         }
