@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, withPrefix } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { v4 as uuid } from 'uuid'
 
@@ -40,7 +40,7 @@ function IndexPage() {
 
                     <div className="w-full h-full flex justify-center items-center absolute top-0 left-0 overflow-hidden -z-10">
                         <StaticImage 
-                            className="min-h-full"
+                            className="h-full"
                             src='../images/landing.jpeg'
                             alt="wearable device"
                         />
@@ -70,11 +70,11 @@ function IndexPage() {
                     </h3>
 
                     <div className="col-start-3 col-end-5 flex gap-x-m">
-                        <Link className="H4R" href="/about">
+                        <Link className="H4R" href={withPrefix("/about")}>
                             About
                         </Link>
 
-                        <Link className="H4R" href="/approach">
+                        <Link className="H4R" href={withPrefix("/approach")}>
                             Approach
                         </Link>
                     </div>
@@ -131,7 +131,7 @@ function IndexPage() {
 
                     <Link 
                         className="w-fit H4R"
-                        href='/projects' 
+                        href={withPrefix('/projects')} 
                         noArrow={true}
                     >
                         + More

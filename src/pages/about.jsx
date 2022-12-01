@@ -1,4 +1,5 @@
 import React from "react"
+import { withPrefix } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Nav from '../components/Nav'
@@ -7,7 +8,6 @@ import Footer from '../components/Footer'
 import Link from '../components/Link'
 
 import Download from '../images/downarrow.svg'
-
 
 function AboutPage() {
     return (
@@ -39,7 +39,7 @@ function AboutPage() {
                         Chanwoo's works have been presented at various conferences including Korea Computer Congress '22, HCI Korea ('19 '21), and Festival of Nature ('22, UK). Some of his clients and employers include LG Corp, KT, Gallery Hyundai, MBC and Art Center Nabi.    
                     </p>
 
-                    <Link className="w-fit H4R" href="/approach">
+                    <Link className="w-fit H4R" href={withPrefix("/approach")}>
                         Approach
                     </Link>
                 </div>

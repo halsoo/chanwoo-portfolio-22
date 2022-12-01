@@ -1,4 +1,5 @@
 import React from 'react'
+import { withPrefix } from 'gatsby'
 import { v4 as uuid } from 'uuid'
 
 function Nav({ className, transparent=false }) {
@@ -6,7 +7,7 @@ function Nav({ className, transparent=false }) {
 
     return (
         <nav className={`w-full h-[95px] px-xxl4 py-xl flex flex-row justify-between bg-transparent ${className}`}>
-            <a className={`H4 ${textColor}`} href="/">
+            <a className={`H4 ${textColor}`} href={withPrefix("/")}>
                 CHANWOO LEE
             </a>
 
@@ -17,7 +18,7 @@ function Nav({ className, transparent=false }) {
                         ['/approach', 'APPROACH'],
                         ['/about', 'ABOUT'],
                     ].map(el => (
-                        <a className={`H4 hover:underline ${textColor}`} href={el[0]} key={uuid()}>
+                        <a className={`H4 hover:underline ${textColor}`} href={withPrefix(el[0])} key={uuid()}>
                             { el[1] }
                         </a>
                     ))

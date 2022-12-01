@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link as GLink } from 'gatsby'
 import { v4 as uuid } from 'uuid'
 import RightArrow from '../../images/rightarrow.svg'
 import Linkedin from '../../images/linkedin.svg'
@@ -31,14 +32,14 @@ function Footer({ className }) {
                             ['/approach', 'Approach'],
                             ['/about', 'About'],
                         ].map(el => (
-                            <a href={el[0]} key={uuid()}>
+                            <GLink to={el[0]} key={uuid()}>
                                 <div className="w-full flex justify-between items-center">
                                     <p className="H4 text-white">
                                         { el[1] }
                                     </p>
                                     <RightArrow className="fill-white"/>
                                 </div>
-                            </a>
+                            </GLink>
                         ))
                     }
                 </div>

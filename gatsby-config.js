@@ -2,6 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+    pathPrefix: `/chanwoo-portfolio-22`,
     siteMetadata: {
         title: `Chanwoo Lee`,
         desc: `Chanwoo Lee's Portfolio web site`
@@ -9,7 +10,7 @@ module.exports = {
     plugins: [
         "gatsby-plugin-postcss",
         "gatsby-plugin-image",
-        "gatsby-plugin-sitemap",
+        //"gatsby-plugin-sitemap",
         "gatsby-transformer-remark",
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",

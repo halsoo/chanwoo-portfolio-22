@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, withPrefix } from 'gatsby'
 import { v4 as uuid } from 'uuid'
 
 import Nav from '../../components/Nav'

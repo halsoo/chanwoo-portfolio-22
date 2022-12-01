@@ -1,4 +1,6 @@
 import React from 'react'
+import { withPrefix } from 'gatsby'
+
 import Tag from '../Tag'
 import RightArrow from '../../images/rightarrow.svg'
 

@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link as GLink } from 'gatsby'
 
 function Card({ className, href, img, title, desc, caption, children }) {
     console.log(href)
     return (
-        <a
+        <GLink
             className={`flex flex-col justify-center gap-y-xs ${className}`}
-            href={href}
+            to={href}
         >
             <div className="w-auto h-[240px] flex justify-center items-center rounded-xs overflow-hidden">
                 <img className="w-full" src={img} alt={`${title} hero image`}/>
@@ -22,7 +23,7 @@ function Card({ className, href, img, title, desc, caption, children }) {
             <p className="minor opacity-30">
                 { caption }
             </p>
-        </a>
+        </GLink>
     )
 }
 
