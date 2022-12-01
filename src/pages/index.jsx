@@ -113,7 +113,6 @@ function IndexPage() {
                             projects.map(obj => {
 
                                 const { title, desc, caption, slug, hero } = obj.frontmatter
-                                console.log(hero)
 
                                 return (
                                     <Card

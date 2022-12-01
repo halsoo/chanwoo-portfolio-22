@@ -9,8 +9,8 @@ import Twt from '../../images/twt.svg'
 function Footer({ className }) {
 
     return (
-        <footer className={`w-full h-[378px] px-xxl4 pt-xxl3 flex flex-row justify-evenly gap-x-l bg-black ${className}`}>
-            <div className="flex flex-col">
+        <footer className={`w-full h-[378px] px-xxl4 pt-xxl3 grid grid-cols-12 gap-x-l bg-black ${className}`}>
+            <div className="col-span-4 flex flex-col">
                 <h3 className="mb-xs H3 text-white">
                     Chanwoo Lee
                 </h3>
@@ -19,7 +19,7 @@ function Footer({ className }) {
                 </p>
             </div>
 
-            <div className="flex flex-col grow">
+            <div className="col-span-4 flex flex-col">
                 <hr className="w-full mb-xs stroke-white stroke-1"/>
                 <p className="mb-l body text-white">
                     MENU
@@ -44,7 +44,7 @@ function Footer({ className }) {
                 </div>
             </div>
 
-            <div className="flex flex-col grow">
+            <div className="col-span-4 flex flex-col">
                 <hr className="w-full mb-xs stroke-white stroke-1"/>
                 <p className="mb-l body text-white">
                     Get in touch

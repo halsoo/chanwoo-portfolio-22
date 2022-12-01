@@ -1,18 +1,10 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import { v4 as uuid } from 'uuid'
 
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
-import Card from '../components/Card'
-import Link from '../components/Link'
-import Tag from '../components/Tag'
 
-import Download from '../images/downarrow.svg'
-
-
-function AboutPage() {
+function ApproachPage() {
     return (
         <>
             <Nav/>
@@ -86,4 +78,4 @@ function AboutPage() {
     )
 }
 
-export default AboutPage
+export default ApproachPage
