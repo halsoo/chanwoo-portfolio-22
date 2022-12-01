@@ -1,0 +1,104 @@
+/* GLOBAL STYLES PRE-PROCESSED */
+
+/* FONTS */
+/* DM Mono 300, 400, 500 normal and italic  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply m-0;
+    }
+
+    body {
+        @apply font-display m-0 relative;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button:focus {
+        @apply outline-none;
+    }
+
+    button:active {
+        @apply outline-none;
+    }
+
+    input:focus {
+        @apply outline-none;
+    }
+
+    input:active {
+        @apply outline-none;
+    }
+
+    input:disabled {
+        @apply bg-[#EFEFEF] bg-opacity-30;
+    }
+    
+    textarea:focus {
+        @apply outline-none;
+    }
+
+    textarea:active {
+        @apply outline-none;
+    }
+
+    em {
+        @apply font-display not-italic;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    .word-keep {
+        word-break: keep-all;
+    }
+}
+
+@layer components {
+    .H1 {
+        @apply font-display text-H1 font-medium text-black;
+    }
+    .H2 {
+        @apply font-display text-H2 font-medium text-black;
+    }
+    .H3 {
+        @apply font-display text-H3 font-medium text-black;
+    }
+    .H3R {
+        @apply font-display text-H3 font-normal text-black;
+    }
+    .H4 {
+        @apply font-display text-H4 font-medium text-black;
+    }
+    .H4R {
+        @apply font-display text-H4 font-normal text-black;
+    }
+    .Subtitle {
+        @apply font-sub text-subtitle font-normal text-black;
+    }
+    .Body24 {
+        @apply font-sub text-subtitle font-normal text-black leading-[32px];
+    }
+    .body {
+        @apply font-sub text-body font-normal text-black leading-[21px];
+    }
+    .minor {
+        @apply font-sub text-minor font-normal text-black;
+    }
+}
