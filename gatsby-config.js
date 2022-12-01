@@ -3,7 +3,8 @@
  */
 module.exports = {
     siteMetadata: {
-        title: `chanwoo-gatsby-221117`,
+        title: `Chanwoo Lee`,
+        desc: `Chanwoo Lee's Portfolio web site`
     },
     plugins: [
         "gatsby-plugin-postcss",
@@ -27,6 +28,14 @@ module.exports = {
                 path: "./src/pages/",
             },
             __key: "pages",
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "projects",
+                path: "./src/projects/",
+            },
+            __key: "projects",
         },
         {    
             resolve: "gatsby-plugin-react-svg",

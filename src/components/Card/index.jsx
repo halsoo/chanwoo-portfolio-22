@@ -1,8 +1,11 @@
 import React from 'react'
 
-function Card({ className, title, desc, caption, children }) {
+function Card({ className, href, title, desc, caption, children }) {
     return (
-        <div className={`flex flex-col justify-center gap-y-xs ${className}`}>
+        <div 
+            className={`flex flex-col justify-center gap-y-xs ${className} cursor-pointer`}
+            onClick={ () => window.location.href = href }
+        >
             { children }
 
             <h4 className="H4">

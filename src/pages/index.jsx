@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { v4 as uuid } from 'uuid'
 
@@ -9,8 +10,28 @@ import Card from '../components/Card'
 import Link from '../components/Link'
 import Tag from '../components/Tag'
 
-
 function IndexPage() {
+    const data = useStaticQuery(graphql`
+        query ProjectList {
+            allMarkdownRemark(
+                sort: [{frontmatter: { order: ASC }}], 
+                limit: 6
+            ) {
+                nodes {
+                    frontmatter {
+                        title
+                        desc
+                        caption
+                        hero
+                        slug
+                    }
+                }
+            }
+        }
+    `)
+
+    const projects = data.allMarkdownRemark.nodes
+
     return (
         <>
             <header className="w-full">
@@ -89,21 +110,26 @@ function IndexPage() {
 
                     <div className="w-full mb-xxl grid grid-cols-12 gap-x-l gap-y-xxl2">
                         {
-                            new Array(6).fill({
-                                title: 'Sunny Day',
-                                desc: "Imagining and depicting sustainable tommorrow and future of technology with XR and Wearable.",
-                                caption: "National Research Foundation",
-                            }).map(obj => (
-                                <Card
-                                    className="col-span-4"
-                                    {...obj}
-                                    key={uuid()}
-                                >
-                                    <div className="w-auto h-[240px] flex justify-center items-center rounded-xs overflow-hidden">
-                                        <StaticImage className="min-h-full" src='../images/ph.jpg' alt="sunny day hero image"/>
-                                    </div>
-                                </Card>
-                            ))
+                            projects.map(obj => {
+
+                                const { title, desc, caption, slug, hero } = obj.frontmatter
+                                console.log(hero)
+
+                                return (
+                                    <Card
+                                        className="col-span-4"
+                                        herf={`/projects/${slug}`}
+                                        title={title}
+                                        desc={desc}
+                                        caption={caption}
+                                        key={uuid()}
+                                    >
+                                        <div className="w-auto h-[240px] flex justify-center items-center rounded-xs overflow-hidden">
+                                            <img className="w-full" src={hero} alt={`${title} hero image`}/>
+                                        </div>
+                                    </Card>
+                                )
+                            })
                         }
                     </div>
 
