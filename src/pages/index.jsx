@@ -40,7 +40,7 @@ function IndexPage() {
 
                     <div className="w-full h-full flex justify-center items-center absolute top-0 left-0 overflow-hidden -z-10">
                         <StaticImage 
-                            className="h-full"
+                            className="w-full"
                             src='../images/landing.jpeg'
                             alt="wearable device"
                         />
