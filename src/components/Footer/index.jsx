@@ -63,7 +63,7 @@ function Footer({ className }) {
                         ].map(el => {
                             const [link, Elem] = el
                             return(
-                                <a href={link} key={uuid()}>
+                                <a href={link} target="_blank" key={uuid()}>
                                     <Elem/>
                                 </a>
                             )
