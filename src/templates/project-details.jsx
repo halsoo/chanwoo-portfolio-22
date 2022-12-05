@@ -133,20 +133,22 @@ function ProjectDetails() {
                     </div>
                 </div>
 
-                <div className="w-full mb-xxl3 flex flex-col">
-                    <h4 className="H4 mb-m">
-                        Video
-                    </h4>
-                    <iframe 
-                        className="w-full"
-                        src={values.video}
-                        width="100%" 
-                        height="auto" 
-                        frameborder="0" 
-                        allow="fullscreen; picture-in-picture" 
-                        allowfullscreen
-                    />
-                </div>
+                { values.video && (
+                    <div className="w-full mb-xxl3 flex flex-col">
+                        <h4 className="H4 mb-m">
+                            Video
+                        </h4>
+                        <iframe 
+                            className="w-full"
+                            src={values.video}
+                            width="100%" 
+                            height="auto" 
+                            frameborder="0" 
+                            allow="fullscreen; picture-in-picture" 
+                            allowfullscreen
+                        />
+                    </div>
+                )}
 
                 <div className="w-full mb-xxl3 flex flex-col">
                     <h4 className="H4 mb-m col-span-12">
